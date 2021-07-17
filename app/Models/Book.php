@@ -12,6 +12,10 @@ class Book extends Model
     use SoftDeletes;
 
     public function categories(){
-    return $this->belongsToMany('App\Models\Category');
-}
+      return $this->belongsToMany('App\Models\Category');
+    }
+
+    public function orders(){
+      return $this->belongsToMany('App\Models\Order');
+    }
 }
